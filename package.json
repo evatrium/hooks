@@ -1,0 +1,98 @@
+{
+	"name": "@evatrium/hooks",
+	"version": "0.0.0-development",
+	"description": "General purpose utility, state and async react hooks.",
+	"keywords": [],
+	"homepage": "https://github.com/evatrium/hooks#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/evatrium/hooks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/evatrium/hooks/issues"
+	},
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"main": "dist/hooks.cjs",
+	"module": "dist/hooks.mjs",
+	"types": "dist/types/index.d.ts",
+	"source": "src",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": "./dist/hooks.mjs",
+			"require": "./dist/hooks.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "vitest",
+		"test:coverage": "vitest run --coverage",
+		"test:ci": "vitest --run",
+		"lint": "eslint \"src/**/*.{ts,tsx}\"",
+		"lint:fix": "npm run lint --fix",
+		"lint:types": "tsc --noEmit",
+		"commit": "git-cz",
+		"semantic-release": "semantic-release"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx}": [
+			"npm run lint:fix"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"dependencies": {
+		"@evatrium/utils": "1.4.0"
+	},
+	"peerDependencies": {
+		"react": ">=16.x"
+	},
+	"devDependencies": {
+		"@testing-library/dom": "^8.19.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "13.4.0",
+		"@testing-library/react-hooks": "8.0.1",
+		"@testing-library/user-event": "^14.4.3",
+		"@types/jsdom": "^20.0.0",
+		"@types/node": "17.0.21",
+		"@types/react": "17.0.50",
+		"@types/react-dom": "18.0.6",
+		"@types/testing-library__jest-dom": "5.14.5",
+		"@typescript-eslint/eslint-plugin": "^5.40.0",
+		"@typescript-eslint/parser": "^5.40.0",
+		"@vitejs/plugin-react": "2.1.0",
+		"@vitest/coverage-c8": "0.24.3",
+		"commitizen": "4.2.5",
+		"cz-conventional-changelog": "3.3.0",
+		"eslint": "8.22.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-react": "7.31.10",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"husky": "^8.0.0",
+		"jsdom": "^20.0.0",
+		"lint-staged": "^13.0.3",
+		"plop": "^3.1.1",
+		"prettier": "^2.7.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"semantic-release": "^19.0.5",
+		"ts-node": "^10.9.1",
+		"typescript": "4.6.2",
+		"vite": "^3.1.6",
+		"vite-plugin-dts": "0.9.10",
+		"vite-tsconfig-paths": "3.4.1",
+		"vitest": "^0.24.0"
+	}
+}
