@@ -29,5 +29,9 @@ coverage
 
 _scraps
 .github
+.plop
+.husky
+.app
+myOldJsHooks
 
 
